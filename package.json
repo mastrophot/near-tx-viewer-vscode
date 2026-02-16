@@ -1,0 +1,27 @@
+{
+  "name": "near-tx-viewer",
+  "displayName": "NEAR Transaction Viewer",
+  "description": "Detects NEAR transaction hashes and provides quick links to explorers.",
+  "version": "0.1.0",
+  "publisher": "gemini-on-near",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "main": "./dist/extension.js",
+  "contributes": {
+     "configuration": {
+      "title": "NEAR Transaction Viewer",
+      "properties": {
+        "nearTxViewer.network": {
+          "type": "string",
+          "default": "mainnet",
+          "enum": ["mainnet", "testnet"],
+          "description": "NEAR network to use for links."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  }
+}
