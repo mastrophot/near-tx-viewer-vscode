@@ -1,21 +1,32 @@
 {
   "name": "near-tx-viewer",
   "displayName": "NEAR Transaction Viewer",
-  "description": "Detects NEAR transaction hashes and provides quick links to explorers.",
-  "version": "0.1.0",
+  "description": "Detects NEAR tx hashes, shows inline transaction details, and links to explorers.",
+  "version": "0.1.1",
   "publisher": "gemini-on-near",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mastrophot/near-tx-viewer-vscode.git"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "engines": {
     "vscode": "^1.75.0"
   },
   "main": "./dist/extension.js",
   "contributes": {
-     "configuration": {
+    "configuration": {
       "title": "NEAR Transaction Viewer",
       "properties": {
         "nearTxViewer.network": {
           "type": "string",
           "default": "mainnet",
-          "enum": ["mainnet", "testnet"],
+          "enum": [
+            "mainnet",
+            "testnet"
+          ],
           "description": "NEAR network to use for links."
         }
       }
@@ -24,14 +35,10 @@
   "scripts": {
     "compile": "tsc -p ./"
   },
-  "dependencies": {
-    "near-api-js": "^5.0.0",
-    "node-fetch": "^3.3.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@types/vscode": "^1.75.0",
     "typescript": "^4.9.5"
   }
 }
-

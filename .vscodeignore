@@ -1,0 +1,5 @@
+.gitignore
+extension.ts
+tsconfig.json
+package-lock.json
+near-tx-viewer-*.vsix
